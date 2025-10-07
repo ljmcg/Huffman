@@ -1,3 +1,7 @@
+// Copyright(c) 2025 Lorcan McGuinness
+// Released under the term specified in file LICENSE.txt
+// SPDX short identifier : MIT
+
 #pragma once
 
 #ifndef HUFFMAN_HPP

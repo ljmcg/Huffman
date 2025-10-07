@@ -3,7 +3,7 @@
   "configurePresets": [
     {
       "name": "default",
-      "inherits": "vcpkg",
+      "inherits": "ninja-vcpkg",
       "environment": {
         "VCPKG_ROOT": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\vcpkg"
       }

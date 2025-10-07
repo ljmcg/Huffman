@@ -12,6 +12,11 @@ add_executable(tests test.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 target_link_libraries(tests PRIVATE huffman)
 
+ enable_testing()
+
+add_test(NAME tests
+         COMMAND tests)
+
 
 add_executable(HelloWorld helloworld.cpp)
 

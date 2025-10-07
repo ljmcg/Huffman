@@ -1,3 +1,7 @@
+// Copyright(c) 2025 Lorcan McGuinness
+// Released under the term specified in file LICENSE.txt
+// SPDX short identifier : MIT
+
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/matchers/catch_matchers_all.hpp>
 #include "huffman.hpp"

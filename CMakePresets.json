@@ -2,12 +2,51 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "vcpkg",
+      "name": "ninja-vcpkg",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build",
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-      }
+      "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "ninja-vcpkg-debug",
+      "configurePreset": "ninja-vcpkg",
+      "displayName": "Build (Debug)",
+      "description": "Build with Ninja/vcpkg (Debug)",
+      "configuration": "Debug"
+    },
+    {
+      "name": "ninja-vcpkg-release",
+      "configurePreset": "ninja-vcpkg",
+      "displayName": "Build (Release)",
+      "description": "Build with Ninja/vcpkg (Release)",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "test-ninja-vcpkg",
+      "configurePreset": "ninja-vcpkg",
+      "hidden": true
+    },
+    {
+      "name": "test-debug",
+      "description": "Test (Debug)",
+      "displayName": "Test (Debug)",
+      "configuration": "Debug",
+      "inherits": [
+        "test-ninja-vcpkg"
+      ]
+    },
+    {
+      "name": "test-release",
+      "description": "Test (Release)",
+      "displayName": "Test (Release)",
+      "configuration": "Release",
+      "inherits": [
+        "test-ninja-vcpkg"
+      ]
     }
   ]
 }
