@@ -1,0 +1,19 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "baseline": "0a081b36b31627565973c8e6810806cef867b8d9",
+    "repository": "https://github.com/microsoft/vcpkg"
+  },
+  "registries": [
+    {
+      "kind": "artifact",
+      "location": "https://github.com/microsoft/vcpkg-ce-catalog/archive/refs/heads/main.zip",
+      "name": "microsoft"
+    },
+    {
+      "kind": "artifact",
+      "location": "files,C:\\build-tools\\vcpkg-cache,readwrite",
+      "name": "binary-cache"
+    }
+  ]
+}
